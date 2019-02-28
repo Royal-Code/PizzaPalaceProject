@@ -1,0 +1,24 @@
+{
+  "name": "pizzapalaceproject",
+  "version": "1.0.0",
+  "description": "PizzaPalaceProject",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Royal-Code/PizzaPalaceProject.git"
+  },
+  "author": "Royal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Royal-Code/PizzaPalaceProject/issues"
+  },
+  "homepage": "https://github.com/Royal-Code/PizzaPalaceProject#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.16"
+  }
+}
