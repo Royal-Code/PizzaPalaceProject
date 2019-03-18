@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html, body{
+    background: #1d7291;
+    background: -moz-linear-gradient(-45deg, #1d7291 0%, #a9cbe5 100%);
+    background: -webkit-linear-gradient(-45deg, #1d7291 0%,#a9cbe5 100%);
+    background: linear-gradient(135deg, #1d7291 0%,#a9cbe5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d7291', endColorstr='#a9cbe5',GradientType=1 );
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 350px;
+
+    border-radius: 5px;
+    background: rgba(60, 60, 60, 0.5);
+
+    transform: translate(-50%, -50%);
+}
+
+.login-wrapper {
+    text-align: center;
+    padding: auto;
+}
+
+.login-form > input {
+    
+    width: 250px;
+    height: 40px;
+
+    margin-bottom: 15px;
+
+
+    background: white;
+    border-color: white;
+
+    border-radius: 40px;
+
+    text-align: center;
+    transition: ease-in-out 1s;
+}
+
+.login-form > input:focus {
+    
+    border-color: lightseagreen;
+    width: 280px;
+    height: 45px;
+
+}
+
+.login-form > button {
+    margin-bottom: 40px;
+}
+
+.fancy-text {
+    font-family: 'Lobster', cursive;
+}
+
+.white-text {
+    color: white;
+}
