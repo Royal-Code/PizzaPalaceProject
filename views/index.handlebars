@@ -1,16 +1,47 @@
-
+{{#unless user}}
 
 <div class="login-container">
     <div class="login-wrapper">
         <h1 class="fancy-text white-text">Pizza Palace Ordering Login</h1>
 
         <form class="login-form" action="/" method="post">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input name="username" type="text" placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
             <br/>
             <button type="submit">Login</button>
         </form>
 
     </div>
 </div>
+
+{{/unless}}
+
+{{#if user}}
+
+<script src="/js/ordering.js"></script>
+
+<a href="/logout"><h3 class="fancy-text white-text">Logout</h3></a>
+
+<div class="main-container">
+
+    <div class="main-wrapper">
+
+        <div class="select-table">
+            <h1 class="header fancy-text white-text">Welcome, Select the Table</h1>
+            <input id="table-number" class="table-number" type="number" min="1" max="25" required/>
+            <br/>
+            <button id="table-submit" class="table-submit">Submit Table Selection</button>
+        </div>
+        
+
+
+
+    </div>
+    
+</div>
+
+{{/if}}
+    
+    
+
 

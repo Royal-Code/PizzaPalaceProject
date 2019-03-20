@@ -78,6 +78,44 @@ html, body{
 
 }
 
+
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 500px;
+
+    border-radius: 5px;
+    background: rgba(60, 60, 60, 0.5);
+
+    transform: translate(-50%, -50%);
+}
+
+.main-wrapper {
+    text-align: center;
+    padding: auto;
+}
+
+.select-table > .table-number {
+    display: inline-block;
+    
+    width: 100px;
+    height: 100px;
+
+    font-size: 2.5rem;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.select-table > .table-submit {
+
+    margin-bottom: 30px;
+
+}
+
 .fancy-text {
     font-family: 'Lobster', cursive;
 }
