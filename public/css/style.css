@@ -35,12 +35,12 @@ html, body{
 
 
     background: white;
-    border-color: white;
+    border: white solid 4px;
 
     border-radius: 40px;
 
     text-align: center;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 0.4s;
 }
 
 .login-form > input:focus {
@@ -49,10 +49,33 @@ html, body{
     width: 280px;
     height: 45px;
 
+    outline: none;
+
 }
 
 .login-form > button {
     margin-bottom: 40px;
+    width: 175px;
+    height: 40px;
+
+    background: lightskyblue;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Lobster', cursive;
+    font-size: 1.4rem;
+
+    border-radius: 40px;
+    border: none;
+
+    outline: none;
+    transition: ease-in-out 0.3s;
+}
+
+.login-form > button:hover {
+    
+    width: 200px;
+    height: 50px;
+
 }
 
 .fancy-text {
@@ -62,3 +85,11 @@ html, body{
 .white-text {
     color: white;
 }
+
+
+
+
+
+
+
+
