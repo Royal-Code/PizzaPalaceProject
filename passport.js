@@ -7,7 +7,7 @@ passport.use('local', new LocalStrategy(
       if (username == "admin") {
             if (password == "password") {
                 
-                console.log("BOOP");
+                //onsole.log("BOOP");
                 return done(null, {username: "admin"});
 
             }

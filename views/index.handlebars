@@ -30,10 +30,46 @@
             <h1 class="header fancy-text white-text">Welcome, Select the Table</h1>
             <input id="table-number" class="table-number" type="number" min="1" max="25" required/>
             <br/>
-            <button id="table-submit" class="table-submit">Submit Table Selection</button>
+            <button onclick="onSubmitButton()" id="table-submit" class="table-submit">Submit Table Selection</button>
         </div>
         
+        <div class="select-items" hidden> 
+            <h1 class="header fancy-text white-text">Select the Items</h1>
+            
+            <div class="pizza-select">
+                <h3 class="white-text fancy-text">Pizza</h3>
+                <select id="pizza-type">
+                    <option value='{"name": "Cheese and tomato £3.50", "price": 3.50}'>Cheese and tomato £3.50</option>
+                    <option value='{"name": "Ham and pineapple £4.20", "price": 4.20}'>Ham and pineapple £4.20</option>
+                    <option value='{"name": "Vegetarian £5.20", "price": 5.20}'>Vegetarian £5.20</option>
+                    <option value='{"name": "Meat feast £5.80", "price": 5.80}'>Meat feast £5.80</option>
+                    <option value='{"name": "Seafood £5.60", "price": 5.60}'>Seafood £5.60</option>
+                </select> 
 
+                <select id="pizza-size">
+                    <option value='{"name": "Small", "price": 0}'>Small</option>
+                    <option value='{"name": "Medium +£2.50", "price": 2.50}'>Medium +£2.50</option>
+                    <option value='{"name": "Large +£5.00", "price": 5.00}'>Large +£5.00</option>
+                </select> 
+
+                <select id="pizza-base">
+                    <option value='{"name": "Traditional", "price": 0}'>Traditional</option>
+                    <option value='{"name": "Thin and Crispy", "price": 0}'>Thin and Crispy</option>
+                </select> 
+
+                <select id="pizza-extra" multiple>
+                    <option value='{"name": "Cheese", "price": 0.5}'>Cheese</option>
+                    <option value='{"name": "Onion", "price": 0.5}'>Onion</option>
+                    <option value='{"name": "Onion", "price": 0.5}'>Peppers</option>
+                    <option value='{"name": "Pepperoni", "price": 0.5}'>Pepperoni</option>
+                </select>
+
+
+                <button onclick="onPizzaAddButton()" id="itemAdd-submit">Add Pizza</button>
+
+            </div>
+            
+        </div>
 
 
     </div>
