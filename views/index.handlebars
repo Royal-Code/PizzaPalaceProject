@@ -33,6 +33,8 @@
             <button onclick="onSubmitButton()" id="table-submit" class="table-submit">Submit Table Selection</button>
         </div>
         
+
+
         <div class="select-items" hidden> 
             <h1 class="header fancy-text white-text">Select the Items</h1>
             
@@ -60,7 +62,7 @@
                 <select id="pizza-extra" multiple>
                     <option value='{"name": "Cheese", "price": 0.5}'>Cheese</option>
                     <option value='{"name": "Onion", "price": 0.5}'>Onion</option>
-                    <option value='{"name": "Onion", "price": 0.5}'>Peppers</option>
+                    <option value='{"name": "Peppers", "price": 0.5}'>Peppers</option>
                     <option value='{"name": "Pepperoni", "price": 0.5}'>Pepperoni</option>
                 </select>
 
@@ -72,8 +74,22 @@
         </div>
 
 
+
+        
+
+
     </div>
     
+</div>
+
+<div class="order-list">
+
+    <h1 class="white-text fancy-text">Order</h1>
+    <h2 class="white-text fancy-text">Table #<span id="displayTableNum"></span></h2>
+    <div id="order-list" class="list white-text">
+        
+    </div>
+
 </div>
 
 {{/if}}

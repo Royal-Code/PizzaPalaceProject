@@ -30,6 +30,7 @@ function updateState(){
 
 function onSubmitButton() {
     order.tableNumber = $('#table-number').val();
+    $('#displayTableNum').html(order.tableNumber);
     console.log(order);
     state = "select-items";
     updateState();
@@ -43,6 +44,7 @@ function onPizzaAddButton() {
     var extra = [
         
     ];
+
     ($('#pizza-extra').val()).forEach(toppingstr => {
         extra.push(JSON.parse(toppingstr));
     });
@@ -63,7 +65,26 @@ function onPizzaAddButton() {
 
     order.pizza.push(pizza);
 
+    displayOrder();
     //console.log(order);
+
+}
+
+function displayOrder() {
+
+    var orderList = "";
+
+    (order.pizza).forEach(pizza => {
+        orderList += pizza.type+":<br/> &emsp;"+pizza.size+"<br/>&emsp;"+pizza.base+"<br/>&emsp;Extras: <br/> ";
+        (pizza.extra).forEach(extra => {
+            orderList += "&emsp;&emsp;"+extra+"<br/>";
+        });
+        orderList += "<br/>";
+    });
+
+    
+
+    $('#order-list').html(orderList);
 
 }
 

@@ -138,6 +138,26 @@ html, body{
     border-radius: 70px;
 }
 
+.order-list {
+
+    text-align: center;
+
+    width: 300px;
+    background: rgba(60, 60, 60, 0.5);
+
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.order-list > .list {
+    text-align: left;
+    padding-left: 20px;
+    margin: auto;
+    width: 75%;
+    border-left: white solid 2px;
+    
+}
+
 .fancy-text {
     font-family: 'Lobster', cursive;
 }
