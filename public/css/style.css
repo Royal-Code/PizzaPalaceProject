@@ -117,6 +117,8 @@ html, body{
 }
 
 .pizza-select {
+
+    display: inline-block;
     border: white solid 2px;
     border-radius: 20px;
     margin-left: 20px;
@@ -168,7 +170,23 @@ html, body{
 
 
 
-
+.select-drinks {
+    display: inline-block;
+    border: white solid 2px;
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-content: center;
+    margin-bottom: 30px;
+}
+.select-drinks > * {
+    margin: auto;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center
+}
 
 
 

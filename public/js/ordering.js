@@ -4,7 +4,11 @@ var order = {
     tableNumber: 0,
     pizza: [
 
-    ]
+    ],
+    drink: [
+
+    ],
+    price: 0
 };
 
 
@@ -13,6 +17,7 @@ function updateState(){
 
     $('.select-table').hide();
     $('.select-items').hide();
+    $('.select-drinks').hide();
 
     switch (state) {
         case "select-table":
@@ -20,6 +25,7 @@ function updateState(){
             break;
         case "select-items":
             $('.select-items').show();
+            $('.select-drinks').show();
             break;
         default:
             break;
@@ -65,6 +71,8 @@ function onPizzaAddButton() {
 
     order.pizza.push(pizza);
 
+    order.price += pizza.price;
+
     displayOrder();
     //console.log(order);
 
@@ -79,10 +87,11 @@ function displayOrder() {
         (pizza.extra).forEach(extra => {
             orderList += "&emsp;&emsp;"+extra+"<br/>";
         });
+        orderList
         orderList += "<br/>";
     });
 
-    
+    orderList += `Price: £${order.price}`;
 
     $('#order-list').html(orderList);
 
