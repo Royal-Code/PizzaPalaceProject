@@ -78,6 +78,16 @@ function onPizzaAddButton() {
 
 }
 
+function onDrinkAddButton() {
+    var drink = JSON.parse($('#drink-select').val());
+
+    order.drink.push( drink );
+
+    order.price += drink.price;
+
+    displayOrder();
+}
+
 function displayOrder() {
 
     var orderList = "";
@@ -87,11 +97,17 @@ function displayOrder() {
         (pizza.extra).forEach(extra => {
             orderList += "&emsp;&emsp;"+extra+"<br/>";
         });
-        orderList
+
         orderList += "<br/>";
     });
 
-    orderList += `Price: £${order.price}`;
+    (order.drink).forEach( drink => {
+        orderList += drink.name;
+        orderList += "<br/>";
+    });
+    orderList += "<br/>";
+
+    orderList += `Price: £${(order.price).toFixed(2)}`;
 
     $('#order-list').html(orderList);
 
