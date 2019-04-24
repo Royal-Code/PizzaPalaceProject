@@ -6,6 +6,7 @@ const bodyParser        = require('body-parser');
 const cookieSession = require('cookie-session');
 
 const path = require('path');
+const fs = require('fs');
 
 const passport      = require('passport');
 
@@ -54,6 +55,37 @@ app.get('/', (req, res) => {
 
 app.post('/',passport.authenticate('local') ,(req, res) => {
     res.redirect('/');
+});
+
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+ }
+
+app.post('/submitorder', (req, res) => {
+    
+    var order = req.body;
+    var PizzaSection = `
+        `;
+
+    console.log(order);
+
+    (order.pizza).forEach( pizza => {
+        PizzaSection += `${pizza.size} ${pizza.base} ${pizza.type}
+        `;
+    });
+
+    fs.writeFileSync("./orders/order_"+makeid(6)+".txt", `
+        Table: ${order.tableNumber},
+
+        Pizzas: ${PizzaSection}
+    `)
+    res.send("BOOP");
 });
 
 app.listen(port, () => {

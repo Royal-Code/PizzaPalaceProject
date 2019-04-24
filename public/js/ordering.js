@@ -8,6 +8,7 @@ var order = {
     drink: [
 
     ],
+    note: "",
     price: 0
 };
 
@@ -17,7 +18,7 @@ function updateState(){
 
     $('.select-table').hide();
     $('.select-items').hide();
-    $('.select-drinks').hide();
+    $('.finalize-order').hide();
 
     switch (state) {
         case "select-table":
@@ -25,14 +26,37 @@ function updateState(){
             break;
         case "select-items":
             $('.select-items').show();
-            $('.select-drinks').show();
+            $('.proceed-checkout').show();
+            break;
+        case "finalize-order":
+            $('.finalize-order').show();
             break;
         default:
             break;
     }
 }
 
+function onFinishOrder() {
 
+    order.note = $("#note").val();
+
+    $.ajax({
+        url: "/submitorder",
+        type: "POST",
+        data: order,
+        success: function (result) {
+            console.log(result);
+        }
+    })
+
+}
+
+function onProceedButton() {
+
+    state = "finalize-order";
+    updateState();
+
+}
 
 function onSubmitButton() {
     order.tableNumber = $('#table-number').val();
